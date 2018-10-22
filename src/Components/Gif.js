@@ -72,9 +72,6 @@ class Gif extends Component {
   shareToSlack() {
     fetch(config.slackUrl, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
       body: JSON.stringify({
         text: "Hey! Check this out",
         attachments: [
