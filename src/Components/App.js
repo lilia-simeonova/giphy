@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import GifsList from "./GifsList";
-import Search from "./Search";
-
+import Home from "./Home";
+import UploadGifs from "./UploadGifs";
 import "./App.css";
 
 class App extends Component {
@@ -11,21 +11,20 @@ class App extends Component {
     this.state = { search: "" };
   }
 
-  updateSearchState(search) {
-    this.setState({ search: search });
-  }
-
   render() {
     return (
-      <div className="App">
-        <header>
-          <Search
-            updateSearch={this.updateSearchState.bind(this)}
-            search={this.state.search}
-          />
-        </header>
-        <GifsList search={this.state.search} />
-      </div>
+      <Router>
+        <div className="App">
+          <nav className="nav">
+            <div className="title">Giphy</div>
+            <Link to="/">Home</Link>
+            <Link to="/upload">Upload Gif</Link>
+          </nav>
+
+          <Route exact path="/" component={Home} />
+          <Route exact path="/upload" component={UploadGifs} />
+        </div>
+      </Router>
     );
   }
 }

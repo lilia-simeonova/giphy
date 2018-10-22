@@ -14,10 +14,15 @@ class GifsList extends Component {
       bottom: false,
       changedSearch: false
     };
+    this.unmounted = false;
     this.getGifs = this.getGifs.bind(this);
     this.useMosaicLayout = this.useMosaicLayout.bind(this);
     this.sort = this.sort.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.unmounted = true;
   }
 
   componentDidMount() {
@@ -27,7 +32,7 @@ class GifsList extends Component {
 
   componentDidUpdate(prevProps) {
     if (!prevProps.urls && prevProps.search !== this.props.search) {
-      this.setState({ urls: [] });
+      this.setState({ urls: [], sort: "" });
       this.getGifs();
     }
   }
@@ -54,6 +59,7 @@ class GifsList extends Component {
       .then(res => res.json())
       .then(res => {
         const urls = res.data;
+        if (this.unmounted) return;
         if (this.state.urls.length === 0) {
           this.setState({ urls });
         } else {
@@ -95,6 +101,7 @@ class GifsList extends Component {
       ? this.setState({ gifsClass: "gifsMosaic" })
       : this.setState({ gifsClass: "gifs" });
   }
+
   sort() {
     let sortedArray = [];
     let sort = "";
@@ -114,6 +121,7 @@ class GifsList extends Component {
       sort: sort
     });
   }
+
   render() {
     const urls = this.state.urls;
 
@@ -131,9 +139,15 @@ class GifsList extends Component {
               Change Layout
             </button>
             <button onClick={this.sort} className="options">
-              Sort {this.state.sort === "ASC" ? "⬆" : "⬇"}
+              Sort {this.state.sort === "ASC" ? "⬆" : ""}
+              {this.state.sort === "DESC" ? "⬇" : ""}
             </button>
-            <p>Sorted by: {this.state.sort !== "" ? "uploaded time" : ""}</p>
+            <p>
+              {" "}
+              {this.state.sort !== ""
+                ? "Sorted by: uploaded time " + this.state.sort
+                : ""}
+            </p>
           </div>
           <div className={this.state.gifsClass}>{gifObj}</div>
         </div>

@@ -4,10 +4,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme-adapter-react-15": "^1.1.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-modal": "^3.6.1",
     "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
@@ -23,6 +25,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -30,6 +35,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "gh-pages": "^2.0.1"
   }
 }

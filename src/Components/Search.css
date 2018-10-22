@@ -2,16 +2,18 @@
   background-color: #B40A04;;
   color: #fff;
   width: 100px;
-  height: 40px;
+  height: 36px;
   border: none;
   font-size: 18px;
 }
+
 .inputSearch {
   line-height: 34px;
   font-size: 18px;
-  border: 3px solid #B40A04;
+  border: 1px solid #B40A04;
   padding: 0 5px;
 }
+
 .search{
   display: flex;
   flex-direction: column;

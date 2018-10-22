@@ -14,22 +14,13 @@ html {
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-
 }
-.options {
-  width: 150px;
-  height: 40px;
-  background-color:#B40A04;
-  /* border: 1px solid red; */
-  color:#fff;
-  border: none;
-  font-size: 15px;
-  margin: 3px;
 
-}
+
 .layout {
   display: none;
 }
+
 .gifsMosaic {
   /* margin: 0 auto; */
   column-gap: 1em;

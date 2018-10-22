@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./Search.css";
 
+const searchTitle = search => {
+  return search ? search : "Trending";
+};
+
 export default class Search extends Component {
   constructor(props) {
     super(props);
@@ -20,9 +24,6 @@ export default class Search extends Component {
   }
 
   render() {
-    const searchTitle = search => {
-      return search ? search : "Trending";
-    };
     return (
       <div className="search">
         <h1>Search for: {searchTitle(this.props.search)}</h1>

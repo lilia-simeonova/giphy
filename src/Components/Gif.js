@@ -17,6 +17,17 @@ class Gif extends Component {
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleImageLoaded = this.handleImageLoaded.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.shareToSlack = this.shareToSlack.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.img.removeEventListener("load", this.handleImageLoaded);
+  }
+
+  componentDidMount() {
+    if (this.img) {
+      this.img.addEventListener("load", this.handleImageLoaded);
+    }
   }
 
   handleImageLoaded() {
@@ -30,11 +41,13 @@ class Gif extends Component {
   openModal() {
     this.setState({ modalIsOpen: true });
   }
+
   handleKeyPress(event) {
     if (event.key === "Enter") {
       this.openModal();
     }
   }
+
   closeModal() {
     this.setState({ modalIsOpen: false, toSlackRes: "" });
   }
@@ -57,7 +70,7 @@ class Gif extends Component {
   }
 
   shareToSlack() {
-    fetch(config.slack_url, {
+    fetch(config.slackUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -118,10 +131,7 @@ class Gif extends Component {
               Rating: <b>{rating}</b>
             </div>{" "}
             <div className="slack">
-              <button
-                className="slackBtn"
-                onClick={this.shareToSlack.bind(this)}
-              />
+              <button className="slackBtn" onClick={this.shareToSlack} />
               {this.state.toSlackRes === "ok" ? (
                 <div className="slackResponse">
                   <span role="img" aria-label="smile-emoji">
@@ -136,7 +146,7 @@ class Gif extends Component {
                 <div className="slackResponse">
                   {" "}
                   <span role="img" aria-label="sad-emoji">
-                    �😔
+                    😔
                   </span>{" "}
                   Something went wrong{" "}
                 </div>
@@ -157,7 +167,9 @@ class Gif extends Component {
             key={id}
             src={url}
             alt={title}
-            onLoad={this.handleImageLoaded}
+            ref={ref => {
+              this.img = ref;
+            }}
             onClick={this.openModal}
             onKeyPress={this.handleKeyPress}
           />
