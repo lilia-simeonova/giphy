@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  /* background-color: #4903e2; 
+  color: #fff; */
+  background-color: #fff;
+  color:#B40A04;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+header {
+  margin-bottom:10px;
+}

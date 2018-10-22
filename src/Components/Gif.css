@@ -1,0 +1,106 @@
+
+
+.gif {
+  display: flex;
+  width: 300px;
+  margin:5px;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+/* @media only screen and (max-width: 768px){
+  .Modal {
+    width: 300px;
+  }
+  img {
+    width: 300px;
+  }
+} */
+
+.info {
+  max-width: 500px;
+}
+.slack {
+  display: flex;
+  flex-direction: row;
+}
+.slack img {
+  margin: 10px 0px;
+}
+.slackResponse{
+  line-height: 40px;
+  padding-left:20px;
+  margin: 10px 0px;
+}
+.slackBtn{
+  background: url("https://platform.slack-edge.com/img/add_to_slack.png");
+  background-repeat: no-repeat;
+  border: none;
+  margin: 10px 0;
+  width: 140px;
+  height: 40px;
+  
+}
+.placeholder :hover{
+  cursor: pointer;
+}
+
+.gif .placeholder {
+  width: 300px; 
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background: url('/placeholder.jpg') 300px 200px;
+  /* display: none; */
+}
+
+.gif .imgClass {
+  background-size: 300px 200px;
+}
+.gif .showImg{
+  width: 300px;
+  height: 200px;
+}
+.gif .hideImg{
+  display: none;
+}
+
+.gifMosaic {
+  margin:5px;
+  display: inline-block;
+  margin: 0 0 1em;
+  max-width: 100%;
+}
+
+.gifMosaic placeholder{
+  margin:5px;
+  display: inline-block;
+  margin: 0 0 1em;
+  max-width: 100%;
+}
+
+.gifMosaic .imgClass {
+  /* background-size: 300px 200px; */
+}
+.gifMosaic .showImg{
+  width: 300px;
+  
+}
+.gifMosaic .hideImg{
+  display: none;
+}
+.modalImg{
+  max-width: 500px;
+  max-height: 500px;
+}
