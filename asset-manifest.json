@@ -1,13 +1,13 @@
 {
-  "main.css": "https://lilia-simeonova.github.io/giphy/static/css/main.248de928.chunk.css",
-  "main.js": "https://lilia-simeonova.github.io/giphy/static/js/main.fb6718cb.chunk.js",
-  "main.js.map": "https://lilia-simeonova.github.io/giphy/static/js/main.fb6718cb.chunk.js.map",
-  "static/js/1.47712619.chunk.js": "https://lilia-simeonova.github.io/giphy/static/js/1.47712619.chunk.js",
-  "static/js/1.47712619.chunk.js.map": "https://lilia-simeonova.github.io/giphy/static/js/1.47712619.chunk.js.map",
-  "runtime~main.js": "https://lilia-simeonova.github.io/giphy/static/js/runtime~main.051da1d8.js",
-  "runtime~main.js.map": "https://lilia-simeonova.github.io/giphy/static/js/runtime~main.051da1d8.js.map",
-  "static/css/main.248de928.chunk.css.map": "https://lilia-simeonova.github.io/giphy/static/css/main.248de928.chunk.css.map",
-  "index.html": "https://lilia-simeonova.github.io/giphy/index.html",
-  "precache-manifest.cf69a4abe22e85019b991639710a38c3.js": "https://lilia-simeonova.github.io/giphy/precache-manifest.cf69a4abe22e85019b991639710a38c3.js",
-  "service-worker.js": "https://lilia-simeonova.github.io/giphy/service-worker.js"
+  "main.css": "/giphy/static/css/main.248de928.chunk.css",
+  "main.js": "/giphy/static/js/main.aa86affe.chunk.js",
+  "main.js.map": "/giphy/static/js/main.aa86affe.chunk.js.map",
+  "static/js/1.47712619.chunk.js": "/giphy/static/js/1.47712619.chunk.js",
+  "static/js/1.47712619.chunk.js.map": "/giphy/static/js/1.47712619.chunk.js.map",
+  "runtime~main.js": "/giphy/static/js/runtime~main.8247f78c.js",
+  "runtime~main.js.map": "/giphy/static/js/runtime~main.8247f78c.js.map",
+  "static/css/main.248de928.chunk.css.map": "/giphy/static/css/main.248de928.chunk.css.map",
+  "index.html": "/giphy/index.html",
+  "precache-manifest.a2b6593b2eb6c4d2b3337f4a1bb609d5.js": "/giphy/precache-manifest.a2b6593b2eb6c4d2b3337f4a1bb609d5.js",
+  "service-worker.js": "/giphy/service-worker.js"
 }
