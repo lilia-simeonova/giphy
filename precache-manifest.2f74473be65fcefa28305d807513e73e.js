@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/giphy/static/css/main.32b3224c.chunk.css"
   },
   {
-    "revision": "88171af79ed1c999a45f19df6b441767",
+    "revision": "30fa025835137d92ffa564773584f29c",
     "url": "/giphy/index.html"
   }
 ];
