@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/giphy/precache-manifest.a2b6593b2eb6c4d2b3337f4a1bb609d5.js"
+  "https://lilia-simeonova.github.io/giphy/precache-manifest.cf69a4abe22e85019b991639710a38c3.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/giphy/index.html", {
+workbox.routing.registerNavigationRoute("https://lilia-simeonova.github.io/giphy/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
