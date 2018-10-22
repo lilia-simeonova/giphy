@@ -59,7 +59,7 @@
   height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
-  background: url('/placeholder.jpg') 300px 200px;
+  background: url('%PUBLIC_URL%/placeholder.jpg') 300px 200px;
   /* display: none; */
 }
 
@@ -100,7 +100,7 @@
 }
 
 .modalImg{
-  max-width: 500px;
+  max-width: 99%;
   max-height: 500px;
   display: block;
   margin: auto;

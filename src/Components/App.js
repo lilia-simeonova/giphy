@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           <nav className="nav">
             <div className="title">Giphy</div>
